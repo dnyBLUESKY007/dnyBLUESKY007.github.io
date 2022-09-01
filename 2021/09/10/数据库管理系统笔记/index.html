@@ -249,8 +249,12 @@
         <h2 id="安装PostgreSQL（macOS）"><a href="#安装PostgreSQL（macOS）" class="headerlink" title="安装PostgreSQL（macOS）"></a>安装PostgreSQL（macOS）</h2><p>直接<code>homebrew</code>安装即可（<code>brew install postgresql</code>）</p>
 <h2 id="安装pgAdmin-4"><a href="#安装pgAdmin-4" class="headerlink" title="安装pgAdmin 4"></a>安装pgAdmin 4</h2><p><a target="_blank" rel="noopener" href="https://www.pgadmin.org/download/pgadmin-4-macos/">Download</a></p>
 <p>版本V5.7</p>
-<p>(start后)打开pgAdmin 4后在servers中新建server(myServer, localhost, username), databases中新建用户名同名database。</p>
-<h2 id="本地数据库服务器运行和关闭"><a href="#本地数据库服务器运行和关闭" class="headerlink" title="本地数据库服务器运行和关闭"></a>本地数据库服务器运行和关闭</h2><p>MBA:</p>
+<p>(postgresql start后)打开pgAdmin 4后在servers中新建server(myServer, localhost, username), databases中新建用户名同名database。</p>
+<h2 id="本地数据库服务器运行和关闭"><a href="#本地数据库服务器运行和关闭" class="headerlink" title="本地数据库服务器运行和关闭"></a>本地数据库服务器运行和关闭</h2><p>General: </p>
+<p>启动：<code>pg_ctl -D /[PATH_TO_POSTGRESQL]/postgres -l /[PATH_TO_POSTGRESQL]/postgres/server.log start</code></p>
+<p>停止：<code>pg_ctl -D /[PATH_TO_POSTGRESQL]/postgres -l /[PATH_TO_POSTGRESQL]/postgres/server.log stop</code></p>
+<p>通过homebrew安装可以参考以下两种可能的路径，执行前务必确认postgres实际所在目录。</p>
+<p>MBA:</p>
 <p><code>pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start</code></p>
 <p><code>pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop</code></p>
 <p>MBP:</p>
