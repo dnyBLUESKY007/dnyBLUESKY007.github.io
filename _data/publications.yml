@@ -1,0 +1,31 @@
+# Publications list
+# Add a new entry for each paper. Fields:
+#   title    : paper title (required)
+#   authors  : author list as a string; wrap your name in <strong> for bold
+#   venue    : conference or journal name and year
+#   year     : publication year (used for grouping/sorting)
+#   paper    : URL to PDF or publisher page (optional)
+#   code     : URL to code repository (optional)
+#   project  : URL to project page (optional)
+#   slides   : URL to slides (optional)
+#   note     : short highlight, e.g. "Oral", "Best Paper Award" (optional)
+
+- title: "Reducing the Costs of Proof Synthesis on Rust Systems by Scaling Up a Seed Training Set"
+  authors: "<strong>Nongyu Di</strong>, Tianyu Chen, Shan Lu, Shuai Lu, Yeyun Gong, Peng Cheng, Jacob R. Lorch, Yuan Yao, Xiaoxing Ma"
+  venue: "arXiv preprint"
+  year: 2026
+  paper: "https://arxiv.org/abs/2602.04910"
+  code: ""
+  project: ""
+  slides: ""
+  note: ""
+
+# - title: "MiniMax-M1: Scaling Test-Time Compute Efficiently with Lightning Attention"
+#   authors: "MiniMax, Aili Chen, Aonian Li, Bangwei Gong, ..., <strong>Nongyu Di</strong>, ..., et al."
+#   venue: "arXiv preprint"
+#   year: 2025
+#   paper: "https://arxiv.org/abs/2506.13585"
+#   code: ""
+#   project: ""
+#   slides: ""
+#   note: ""

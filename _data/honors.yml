@@ -1,0 +1,9 @@
+# Honors & Awards
+# Fields:
+#   year  : award year (required)
+#   name  : award name (required)
+#   org   : awarding organization (optional)
+
+- year: "2024-2025"
+  name: "Several Academic Scholarships"
+  org: "Nanjing University"
