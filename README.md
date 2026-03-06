@@ -1,96 +1,128 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# AP  [![Build Status](https://travis-ci.org/kssim/ap.svg?branch=master)](https://travis-ci.org/kssim/ap.svg?branch=master)
+"AP" is [Jekyll](https://jekyllrb.com/) theme for career. This theme is free and open-source.  
+Based on Chester How's tale-theme(https://github.com/chesterhow/tale) with a few new features:  
+* SNS Link
+* Google Analytics
+* Responsive design
+* Upgrading awesome fonts and modifying some layouts.
+* Use "About" as main.
+  * It can be written in simple resume form.
+* Change "Post" to "Project Portfolio"
+  * You can manage your project experience just like running a blog.
 
-![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
 
-# Getting Started
+# Preview
+[![AP Screenshot](https://github.com/kssim/ap/blob/master/screenshot.png?raw=true)](https://kssim.github.io/ap/)
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
 
-See more info at https://academicpages.github.io/
+# Usage
+1. Fork and clone the AP repo:
+    * git clone https://github.com/kssim/ap.git
+2. Install Jekyll:
+    * gem install jekyll
+3. Install the theme's dependencies
+    * bundle install
+4. Customize the theme
+    * update _config.yml
+5. Run the Jekyll server
+    * jekyll serve
 
-## Running locally
 
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
-
-1. Clone the repository and made updates as detailed above.
-
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try run `sudo apt install ruby-dev ruby-bundler nodejs` again.
-
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
-
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change to Markdown (*.md) and HTML files, while changes to the core template and configuration (i.e., `_config.yml`) will require stoping and restarting Jekyll.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
-
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-## Using Docker
-
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-You can build and execute the container by running the following command in the repository:
-
+## Structure
+* Here are the main files of the template
 ```bash
-chmod -R 777 .
-docker compose up
+ap
+├── _includes                  # theme includes
+├── _layouts                   # theme layouts (see below for details)
+├── _posts                     # Project & Portfolio posts
+├── _sass                      # Sass partials 
+├── portfolio                  # Main page for "portfolio"
+├── assets
+|  ├── css                     # font-awesome and main css
+|  ├── fonts                   # Font-Awesome
+|  ├── favicon.ico             # Favicon
+|  └── img                     # Images used for "about" page
+├── _config.yml                # sample configuration
+└── index.md                   # Resume to show on "about" page
 ```
 
-You should now be able to access the website from `localhost:4000`.
+## Configure AP
+Open _config.yml in a text editor to change most of the blog's settings.
 
-### Using the DevContainer in VS Code
 
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development container configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
+### Site Configuration
+Configure Jekyll as your own blog or with a subpath in in _config.yml:  
+```yml
+title: [Website Title]
+baseurl: [Website Subpath]
+url: [Github Page Url]
+google_analytics: [Google Analytics Tracking ID]
+```
+Please configure this before using the theme.  
+And to enable Google Analytics, add your [Traking ID](https://support.google.com/analytics/answer/1008080?visit_id=1-636579797402349951-2693679291&rd=1)
 
-# Maintenance
 
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
+### About You
+Meta variables hold basic information about your profile and resume.  
+Change these variables in _config.yml:  
+```yml
+author:
+  name: [Your Name]
+  desc: [Short introduction]
+  email: [Your E-Mail Address]
+  selfie: [Your Avatar]
+```
+Please configure this before using the theme.
 
-## Bugfixes and enhancements
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
 
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
+### SNS Information
+Your SNS information to display at the bottom of the page.  
+All values except "email" are text values.  
+```yml
+social:
+  email: true
+  behance:
+  bitbucket:
+  dribbble:
+  facebook:
+  flickr:
+  github: 
+  google_plus:
+  instagram:
+  keybase:
+  linkedin:
+  pinterest:
+  reddit:
+  soundcloud:
+  stack_exchange:
+  steam:
+  tumblr:
+  gitlab:
+  twitter: 
+  vimeo:
+  wordpress:
+  youtube:
+  default_txt: "Follow On"
+```
 
+
+## Portfolio Schema
+```markdown
 ---
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
+layout: post
+title:  [Project title to show in portfolio list]
+info: [A brief introduction to show in portfolio list]
+tech: [The technologies used in the project to show in portfolio list]
+type: [Property of the project to be displayed in front of the project's info(toy or company name)]
+---
+```
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+## Other formats
+It uses the markdown syntax by default, and there is no format other than the one mentioned above.  
+You can use it as you like.  
+
+
+## License
+[The MIT License (MIT)](https://raw.githubusercontent.com/kssim/ap/master/LICENSE)
