@@ -1,0 +1,12 @@
+<ul class="honors-list">
+  {% for item in site.data.honors %}
+  <li class="honors-item">
+    <span class="honors-year">{{ item.year }}</span>
+    &nbsp;&mdash;&nbsp;
+    <span class="honors-name">{{ item.name }}</span>
+    {% if item.org and item.org != "" %}
+      <span class="honors-org">, {{ item.org }}</span>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>

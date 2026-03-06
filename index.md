@@ -1,26 +1,40 @@
 ---
-layout: about 
+layout: about
 ---
 
-# About Me
-There is no specific format here. You can fill out the form you want.  
-For example, you might want to write a brief introduction about your self, experience, interests, publications, and other information.  
-I wrote "about me", "career", and "interests" on this page as an example.  
+## About Me
 
-<br/>
+I am a PhD student at [Nanjing University](https://www.nju.edu.cn/), advised by Prof. Xiaoxing Ma.
+My research interests include **Formal Verification**, **Deep Learning**, and **Software Engineering**.
 
-# Career
-* Second Company (2012/01 ~ )
-  * Web Application Firewall
-    * Developed TCP network acceleration module.
-    * Developde Application User Interface.
-* First Company (2011/01 ~ 2011/12)
-  * VPN Development Company
-  * Team Leader of VPN Development Div.
+Before that, I received my B.Sc. in Computer Science from Lanzhou University in 2024.
 
-<br/>
+---
 
-# Interests
-I am interested in technology trends.  
-I'm not afraid to learn languages, but I enjoy using Python.  
-I like to automate and reduce annoying things.  
+## News
+
+{% include news.html %}
+
+---
+
+## Publications
+
+{% include publications.html %}
+
+---
+
+## Honors & Awards
+
+{% include honors.html %}
+
+---
+
+## Services
+
+{% include services.html %}
+
+---
+
+## Education & Experience
+
+{% include education.html %}

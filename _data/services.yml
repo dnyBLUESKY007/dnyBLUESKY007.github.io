@@ -1,0 +1,14 @@
+# Academic Services
+# Group entries by role type using the "role" field.
+# Fields:
+#   role    : e.g. "Reviewer", "Program Committee", "Organizer" (used for grouping)
+#   venue   : conference or journal name
+#   years   : year(s) as a string, e.g. "2024" or "2024, 2025"
+
+# - role: "Reviewer"
+#   venue: "Conference / Journal Name"
+#   years: "2025"
+
+- role: "Teaching Assistant"
+  venue: "Discrete Mathematics, Nanjing University"
+  years: "2024"

@@ -1,0 +1,26 @@
+# Education
+# Fields:
+#   title  : degree or position title (required)
+#   org    : institution or company name (required)
+#   url    : institution or company URL (optional)
+#   start  : start date (required)
+#   end    : end date or "present" (required)
+#   note   : a free-form extra line, supports Markdown (optional)
+
+- title: "Research Intern, Artificial Intelligence Reasoning Group, Systems and Networking Research Group"
+  org: "Microsoft Research Asia, Beijing, China"
+  start: "Apr. 2025"
+  end: "present"
+  note: "Mentors: Shuai Lu and Tianyu Chen"
+
+- title: "Ph.D. in Software Engineering"
+  org: "Nanjing University, Nanjing, China"
+  start: "Sept. 2024"
+  end: "present"
+  note: "Advisor: Prof. Xiaoxing Ma"
+
+- title: "B.Sc. in Computer Science"
+  org: "Lanzhou University, Lanzhou, China"
+  start: "Sept. 2020"
+  end: "Jun. 2024"
+  note: "Advisor: Prof. Xin Liu"

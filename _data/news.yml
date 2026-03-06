@@ -1,0 +1,8 @@
+# News / updates feed
+# Add entries in reverse chronological order (newest first).
+# Fields:
+#   date    : display string, e.g. "Mar 2026"
+#   content : plain text or inline HTML
+
+- date: "Mar 2026"
+  content: "Started this academic homepage."

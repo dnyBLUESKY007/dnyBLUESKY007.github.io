@@ -26,6 +26,75 @@
     }
   }
 
+  // Publications
+  .pub-list {
+    list-style: none;
+    padding: 0;
+  }
+  .pub-item {
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+  }
+  .pub-title {
+    font-weight: bold;
+  }
+  .pub-note {
+    background: #e8f4f8;
+    color: #2a6496;
+    border-radius: 3px;
+    padding: 1px 5px;
+    font-size: 0.85rem;
+  }
+  .pub-links a {
+    margin-right: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  // News
+  .news-list {
+    list-style: none;
+    padding: 0;
+  }
+  .news-item {
+    margin-bottom: 0.5rem;
+  }
+  .news-date {
+    font-weight: bold;
+    min-width: 5rem;
+    display: inline-block;
+  }
+
+  // Honors & Awards
+  .honors-list {
+    list-style: none;
+    padding: 0;
+  }
+  .honors-item {
+    margin-bottom: 0.4rem;
+  }
+  .honors-year {
+    font-weight: bold;
+    min-width: 3rem;
+    display: inline-block;
+  }
+  .honors-org {
+    color: gray;
+    font-size: 0.95rem;
+  }
+
+  // Services
+  .services-list {
+    list-style: disc;
+    padding-left: 1.5rem;
+  }
+  .services-item {
+    margin-bottom: 0.3rem;
+  }
+  .services-years {
+    color: gray;
+    font-size: 0.9rem;
+  }
+
   &-icon {
     margin-left: 1.3rem;
     line-height: 2rem;

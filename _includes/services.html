@@ -1,0 +1,14 @@
+{% assign grouped = site.data.services | group_by: "role" %}
+{% for group in grouped %}
+<h3>{{ group.name }}</h3>
+<ul class="services-list">
+  {% for item in group.items %}
+  <li class="services-item">
+    {{ item.venue }}
+    {% if item.years and item.years != "" %}
+      <span class="services-years">({{ item.years }})</span>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}

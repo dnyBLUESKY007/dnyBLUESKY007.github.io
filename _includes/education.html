@@ -1,0 +1,17 @@
+<ul class="education-list">
+  {% for item in site.data.education %}
+  <li class="education-item">
+    <span class="education-year">{{ item.start }} – {{ item.end }}</span>
+    &nbsp;&mdash;&nbsp;
+    <strong>{{ item.title }}</strong>,
+    {% if item.url %}
+      <a href="{{ item.url }}">{{ item.org }}</a>
+    {% else %}
+      {{ item.org }}
+    {% endif %}
+    {% if item.note and item.note != "" %}
+      <br><span class="education-note">{{ item.note | markdownify | remove: '<p>' | remove: '</p>' | strip }}</span>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>

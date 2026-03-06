@@ -1,0 +1,23 @@
+{% assign pubs_by_year = site.data.publications | group_by: "year" | sort: "name" | reverse %}
+{% for group in pubs_by_year %}
+<h3>{{ group.name }}</h3>
+<ul class="pub-list">
+  {% for pub in group.items %}
+  <li class="pub-item">
+    <span class="pub-title">{{ pub.title }}</span><br>
+    <span class="pub-authors">{{ pub.authors }}</span><br>
+    <em>{{ pub.venue }}</em>
+    {% if pub.note and pub.note != "" %}
+      &nbsp;<span class="pub-note">{{ pub.note }}</span>
+    {% endif %}
+    <br>
+    <span class="pub-links">
+      {% if pub.paper and pub.paper != "" %}<a href="{{ pub.paper }}">[paper]</a>{% endif %}
+      {% if pub.code and pub.code != "" %}<a href="{{ pub.code }}">[code]</a>{% endif %}
+      {% if pub.project and pub.project != "" %}<a href="{{ pub.project }}">[project]</a>{% endif %}
+      {% if pub.slides and pub.slides != "" %}<a href="{{ pub.slides }}">[slides]</a>{% endif %}
+    </span>
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}
