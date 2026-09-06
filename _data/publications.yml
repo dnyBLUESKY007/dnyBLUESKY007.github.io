@@ -10,6 +10,16 @@
 #   slides   : URL to slides (optional)
 #   note     : short highlight, e.g. "Oral", "Best Paper Award" (optional)
 
+- title: "Planning to Hammer: Difficulty-Aware Decomposition for Automating Rocq Proofs"
+  authors: "Ning Zhang, <strong>Nongyu Di</strong>, Zenan Li, Yuan Yao, Xiaoxing Ma"
+  venue: "International Conference on Object-Oriented Programming Systems, Languages, and Applications (OOPSLA'26)"
+  year: 2026
+  paper: "https://arxiv.org/abs/2606.17981"
+  code: ""
+  project: ""
+  slides: ""
+  note: ""
+
 - title: "Reducing the Costs of Proof Synthesis on Rust Systems by Scaling Up a Seed Training Set"
   authors: "<strong>Nongyu Di</strong>, Tianyu Chen, Shan Lu, Shuai Lu, Yeyun Gong, Peng Cheng, Jacob R. Lorch, Yuan Yao, Xiaoxing Ma"
   venue: "arXiv preprint, in submission"

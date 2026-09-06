@@ -4,5 +4,8 @@
 #   date    : display string, e.g. "Mar 2026"
 #   content : plain text or inline HTML
 
+- date: "Jun 2026"
+  content: "Our work on automated proof search was accepted at **OOPSLA 2026**."
+
 - date: "Mar 2026"
   content: "Started this academic homepage."
